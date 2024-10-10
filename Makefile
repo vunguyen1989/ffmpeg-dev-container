@@ -4,7 +4,7 @@ run_hello:
 	./hello small_bunny_1080p_60fps.mp4
 
 remux: 
-	gcc -L/opt/ffmpeg/lib -I/opt/ffmpeg/include/ 2_remuxing.c -lavcodec -lavformat -lavfilter -lavdevice -lswresample -lswscale -lavutil -o remux
+	gcc -g -L/opt/ffmpeg/lib -I/opt/ffmpeg/include/ 2_remuxing.c -lavcodec -lavformat -lavfilter -lavdevice -lswresample -lswscale -lavutil -o remux
 run_remux: 
 	./remux small_bunny_1080p_60fps.mp4 output_test.ts
 
